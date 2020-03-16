@@ -1,0 +1,6 @@
+Il modello finale utilizzato nella ML-CUP è costituito da una rete neurale fully-connected, che aggiorniamo con l'algoritmo di
+Backpropagation con Stochastic Gradient Descent. Utilizziamo un unico hidden layer con 30 neuroni, la funzione di attivazione
+su quest'ultimo è la sigmoide, mentre sull'ultimo layer è l'identità. Come tecnica di validazione abbiamo usato una k-fold
+cross validation (k=5), assieme ad una stop condition dinamica: l'aumento del MEE nel Validation Set comporta l'interruzione
+dell'update della rete. In questo modo siamo arrivati a scegliere come stop point 1500 epochs. Le minibatch sono costituite
+da 50 sample. Il learning rate ottimale trovato è stato di 0.05, la costante di regolarizzazione 10^(-6) e il momentum nullo.
